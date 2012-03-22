@@ -8,20 +8,49 @@
 	<meta name="generator" content="TextMate http://macromates.com/">
 	<meta name="author" content="Damon Young">
 	<style type="text/css">
-	h1{
+	body{
 		color: white;
-		letter-spacing: 50px;
-		font-size: 3em;
-		font-family: eurostile;
-		font-weight:bold;
 		text-shadow: -1px 0 rgba(0,0,0,0.5), 0 -1px rgba(0,0,0,0.3), 0 1px rgba(255,255,255,0.5), -1px -2px rgba(0,0,0,0.3);
+		font-family: eurostile;
+		text-align: center;
 	}
-	.container .content {
-  		display: none
+	#columns{
+		margin-left: auto;   
+		margin-right: auto; 
+		width: 1024px;
 	}
-	.container:hover .content {
-  		display: block
+	.columnheading {
+		font-size: 18px;
+	 	width: 23%; 
+	 	padding: 1% }
+
+	.columntitle{
+		font-size: 18px;
+		width: 23%; padding: 1%
+
+	} 	
+
+
+	#clearblu{
+		text-align: center;
+		letter-spacing: 50px;
+		font-size: 50px;
+		font-weight:bold;
 	}
+	#consulting{
+		letter-spacing: 25px;
+		font-size: 18px;
+	}
+	#brand{
+		visibility: hidden;
+		-webkit-transition: visibility .3s linear 1s;
+		-moz-transition: all 0.3s linear;
+	}
+	#brand:hover #brandcontent { 
+		visibility:visible
+		
+	 }
+
 	</style>
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -30,21 +59,14 @@
 </head>
 <body bgcolor="0099FF" background="clearblu_bg.jpg">
 	<p>
-	<h1><center>CLEAR BLU</center></h1>
-	<h2>
-		<center><font color="white" class="insetType" style="letter-spacing: 25px; text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;" face=eurostile size=3>CONSULTING</font></center>
-	</h2>
-	<table id="container" align="center" cellspacing="50" border="0" cellspacing="5" cellpadding="5">
-		<tr>
-			<td><center id="content"><strong><font color="white" style="text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;" face=eurostile>CLOUD COMPUTING</font></strong></center></td>  
-			<td><center><strong><font color="white" style="text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;" face=eurostile>MOBILE APPS</font></strong></center></td>  
-			<td><center><strong><font color="white" style="text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;" face=eurostile>SOCIAL NETWORKING</font></strong></center></td>
-			<td><center><strong><font color="white" style="text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;" face=eurostile>BRAND MARKETING</font></strong></center></td>
-		</tr>
-	</table>
-	<p>
-	<center><strong><font color="white" style="letter-spacing: 25px; text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;" face=eurostile size=30 >COMING SOON</font></strong></center>
-	<p><p>
-	<center><font color="white" style="text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;" face=eurostile><a href="mailto:info@clearbluconsulting.com?subject=Advice?">INFO@CLEARBLUCONSULTING.COM</a></font></center>
+	<div><h1 id="clearblu">CLEAR BLU</h1>
+	<h1 id="consulting">CONSULTING</h1>
+	<p><p><p>
+	<div id="columns">
+		<div><span class="columnheading brand">What is your brand?</span><span class="columnheading">Who are your customers?</span><span class="columnheading">Where are your customers?</span><span class="columnheading">How can you reach them?</span></div>
+	<div><span class="columntitle brand">BRAND Marketing</span><span class="columntitle">SOCIAL networking</span><span class="columntitle">MOBILE applications</span><span class="columntitle">CLOUD computing</span></div></div>
+
+
+	<center><a href="mailto:info@clearbluconsulting.com?subject=Advice?">INFO@CLEARBLUCONSULTING.COM</a></center>
 </body>
 </html>
