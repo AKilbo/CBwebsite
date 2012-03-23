@@ -76,6 +76,12 @@
 		background-color:#0099FF;
 		background:url('clearblu_bg.jpg');
 	}
+	form{
+		text-align: left;
+		color:black;
+		text-shadow:none;
+		text-size:;
+	}
 	h2{
 		font-size: 15px;
 		text-decoration: underline;
@@ -140,13 +146,13 @@
 	#box {
 	display: none;
 	position: fixed;
-	top: 20%;
+	top: 15%;
 	left: 20%;
-	width: 500px;
-	height: 500px;
+	width: 520px;
+	height: 380px;
 	padding: 48px;
 	margin:0;
-	border: 1px solid black;
+	border: 1px black;
 	background-color: white;
 	z-index:101;
 	overflow: auto;
@@ -157,7 +163,7 @@
 	float:center;
 	top:0;
 	left:0;
-	width:496px;
+	width:615px;
 	height:24px;
 	padding:0;
 	padding-top:4px;
@@ -169,6 +175,10 @@
 	text-align:center;
 	}
 
+	#info{
+		position: absolute;
+		float:center;
+	}
 	</style>
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -188,25 +198,53 @@
 			<a href="javascript:unhide('bcontent')" id="blabel">BRAND Marketing</a>
 			<div id='bcontent' class="hidden"><p>Whether you are a startup that’s still trying to discern its game-changing business model or an established firm seeking to reintroduce its offerings to a new and changing marketplace, ClearBlu can help you define your unique value proposition and brand identity to place you at the top of your industry</p>
 				<button href="#" onClick="openbox('Get Advice', 1)">Get Advice</button>
-				<div id="shadowing"></div>
+			</div>
+		</div>
+
+		<div class="social column">
+			<p class="header">Who are your customers?</p>
+			<a href="javascript:unhide('scontent')" id="slabel">SOCIAL Networking</a>
+			<div id='scontent' class="hidden"><p>Somewhere among the hundreds of millions of users joining online social networks every day are a group of people who are desperately seeking exactly the kind of product your company offers. ClearBlu can help you build a strategy to carve out your perfect niche on the global social graph.</p>
+				<button href="#" onClick="openbox('Get Advice', 1)">Get Advice</button>
+			</div>
+		</div>
+
+		<div class="mobile column">
+			<p class="header">Where are your customers?</p>
+			<a href="javascript:unhide('mcontent')" id="mlabel">MOBILE Applications</a>
+			<div id='mcontent' class="hidden"><p>With the explosive growth of smartphones, tablets, and near ubiquitous wi-fi access, customers now expect to be served everywhere. ClearBlu can help you expand your reach into the mobile web so that the people who need your products can get them whenever and wherever they want it.</p>
+				<button href="#" onClick="openbox('Get Advice', 1)">Get Advice</button>
+			</div>
+		</div>
+
+		<div class="cloud column">
+			<p class="header">How can you Reach Them?</p>
+			<a href="javascript:unhide('ccontent')" id="clabel">CLOUD Computing</a>
+			<div id='ccontent' class="hidden"><p>Getting the best value for your investments in an infrastructure that can handle the volatility of today’s marketplace is an ongoing challenge. Clearblu can help you create a framework that’s elastic enough to support all your initiatives while still keeping an eye on the bottom line</p>
+				<button href="#" onClick="openbox('Get Advice', 1)">Get Advice</button>
+			</div>
+		</div>
+	</div>
+
+<div id="shadowing"></div>
 				<div id="box">
  					<span id="boxtitle"></span>
   					<form method="GET" action="lightbox-form-test.html" target="_parent">
   						<p>Name: 
-      						<input type="text" name="name" value="First Last" maxlength="60" size="60">
+      						<input type="text" name="name" value="First Last" maxlength="60" size="72">
     					</p>
     					<p>Company: 
-      						<input type="text" name="company" value="company" maxlength="60" size="60">
+      						<input type="text" name="company" value="Company Name" maxlength="60" size="67">
     					</p>
-      					<p>Email adress: 
-      						<input type="text" name="email" value="myself@somedomainname.com" maxlength="60" size="60">
+      					<p>Email Address: 
+      						<input type="text" name="email" value="you@domain.com" maxlength="60" size="60">
       					<p>Phone: 
-      						<input type="text" name="phone" value="(XXX)-XXX-XXXX" maxlength="60" size="60">
+      						<input type="text" name="phone" value="(XXX)-XXX-XXXX" maxlength="14" size="14">
     					</p>
-    					<p>Questions: 
-      						<textarea rows="60" cols="8" name="questions" value="" maxlength="400" size="100">
-    					</p>
-      					<p> Interest
+    					<p>Questions:<p> 
+      						<textarea rows="5" cols="60" name="questions" value="" maxlength="600" size="100"></textarea>
+    					
+      					<p> Interest:
       						<select name="select">
         						<option selected>Brand Marketing</option>
         						<option>Social Networking</option>
@@ -220,32 +258,7 @@
     					</p>
   					</form>
 				</div>
-			</div>
-		</div>
 
-		<div class="social column">
-			<p class="header">Who are your customers?</p>
-			<a href="javascript:unhide('scontent')" id="slabel">SOCIAL Networking</a>
-			<div id='scontent' class="hidden"><p>Somewhere among the hundreds of millions of users joining online social networks every day are a group of people who are desperately seeking exactly the kind of product your company offers. ClearBlu can help you build a strategy to carve out your perfect niche on the global social graph.</p>
-			</div>
-		</div>
-
-		<div class="mobile column">
-			<p class="header">Where are your customers?</p>
-			<a href="javascript:unhide('mcontent')" id="mlabel">MOBILE Applications</a>
-			<div id='mcontent' class="hidden"><p>With the explosive growth of smartphones, tablets, and near ubiquitous wi-fi access, customers now expect to be served everywhere. ClearBlu can help you expand your reach into the mobile web so that the people who need your products can get them whenever and wherever they want it.</p>
-			</div>
-		</div>
-
-		<div class="cloud column">
-			<p class="header">How can you Reach Them?</p>
-			<a href="javascript:unhide('ccontent')" id="clabel">CLOUD Computing</a>
-			<div id='ccontent' class="hidden"><p>Getting the best value for your investments in an infrastructure that can handle the volatility of today’s marketplace is an ongoing challenge. Clearblu can help you create a framework that’s elastic enough to support all your initiatives while still keeping an eye on the bottom line</p>
-			</div>
-		</div>
-	</div>
-
-
-	<center><a href="mailto:info@clearbluconsulting.com?subject=Advice?">INFO@CLEARBLUCONSULTING.COM</a></center>
+	<a id="info" href="mailto:info@clearbluconsulting.com?subject=Advice?">INFO@CLEARBLUCONSULTING.COM</a>
 </body>
 </html>
