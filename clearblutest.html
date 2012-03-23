@@ -7,6 +7,15 @@
 	<title>Clear Blu Consulting - Cloud, Mobile, Social, Brands</title>
 	<meta name="generator" content="TextMate http://macromates.com/">
 	<meta name="author" content="Damon Young">
+	<script type="text/javascript">
+		function unhide(divID) {
+ 			var item = document.getElementById(divID);
+ 			if (item) {
+	 		item.className=(item.className=='hidden')?'unhidden':'hidden';
+ 			}
+	 	}
+	</script>
+
 	<style type="text/css">
 	@import url(http://fonts.googleapis.com/css?family=Karla);
 	body{
@@ -62,6 +71,10 @@
 	.social:hover #slabel{ visibility: visible;}
 	.mobile:hover #mlabel{ visibility: visible;}
 	.cloud:hover #clabel{ visibility: visible;}
+
+	.hidden { display: none; }
+ 	.unhidden { display: block; }
+ 	
 
 	.black_overlay{
 	display: none;
@@ -125,8 +138,8 @@
 	<div id="columns">
 		<div class="brand column">
 			<p id="bheader">What is your Brand?</p>
-			<a href="" id="blabel">BRAND Marketing</a>
-			<p>Whether you are a startup that’s still trying to discern its game-changing business model or an established firm seeking to reintroduce its offerings to a new and changing marketplace, ClearBlu can help you define your unique value proposition and brand identity to place you at the top of your industry</p>
+			<a href="javascript:unhide('bcontent')" id="blabel">BRAND Marketing</a>
+			<div id='bcontent'><p>Whether you are a startup that’s still trying to discern its game-changing business model or an established firm seeking to reintroduce its offerings to a new and changing marketplace, ClearBlu can help you define your unique value proposition and brand identity to place you at the top of your industry</p>
 			<button  href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Get Advice</button>
 			<div id="light" class="white_content">
 				<form action="">
@@ -134,33 +147,34 @@
    	 				<label for="password">Password: </label> <input type="password" id="password" class="input" />
     				<label>&nbsp; </label> <input type="submit" value="Submit" class="button" /> <input type="submit" value="Cancel" class="button" />
 				</form>  
-				<button href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</button></div>
+				<button href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</button></div></div>
 
 
 		</div>
 		<div class="social column">
 			<p class="header">Who are your customers?</p>
-			<a href="" id="slabel">SOCIAL Networking</a>
-			<p>Somewhere among the hundreds of millions of users joining online social networks every day are a group of people who are desperately seeking exactly the kind of product your company offers. ClearBlu can help you build a strategy to carve out your perfect niche on the global social graph.</p>
+			<a href="javascript:unhide('scontent')" id="slabel">SOCIAL Networking</a>
+			<div id='scontent'><p>Somewhere among the hundreds of millions of users joining online social networks every day are a group of people who are desperately seeking exactly the kind of product your company offers. ClearBlu can help you build a strategy to carve out your perfect niche on the global social graph.</p>
 			<button  href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Get Advice</button>
 			<div id="light" class="white_content">
 				This is the lightbox content. 
 				<button href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</button></div>
-
+				</div>
 		</div>
 		<div class="mobile column">
 			<p class="header">Where are your customers?</p>
-			<a href="" id="mlabel">MOBILE applications</a>
-			<p>With the explosive growth of smartphones, tablets, and near ubiquitous wi-fi access, customers now expect to be served everywhere. ClearBlu can help you expand your reach into the mobile web so that the people who need your products can get them whenever and wherever they want it.</p>
+			<a href="javascript:unhide('mcontent')" id="mlabel">MOBILE applications</a>
+			<div id='mcontent'><p>With the explosive growth of smartphones, tablets, and near ubiquitous wi-fi access, customers now expect to be served everywhere. ClearBlu can help you expand your reach into the mobile web so that the people who need your products can get them whenever and wherever they want it.</p>
 			<button  href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Get Advice</button>
 			<div id="light" class="white_content">
 				This is the lightbox content. 
 				<button href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</button></div>
+				</div>
 		</div>
 		<div class="cloud column">
 			<p class="header">How can you Reach Them?</p>
-			<a href="" id="clabel">CLOUD computing</a>
-			<p>Getting the best value for your investments in an infrastructure that can handle the volatility of today’s marketplace is an ongoing challenge. Clearblu can help you create a framework that’s elastic enough to support all your initiatives while still keeping an eye on the bottom line</p>
+			<a href="javascript:unhide('ccontent')" id="clabel">CLOUD computing</a>
+			<div id='ccontent'><p>Getting the best value for your investments in an infrastructure that can handle the volatility of today’s marketplace is an ongoing challenge. Clearblu can help you create a framework that’s elastic enough to support all your initiatives while still keeping an eye on the bottom line</p>
 			<button  href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Get Advice</button>
 			<div id="light" class="white_content">
 				<form action="">F
@@ -169,6 +183,7 @@
     				<label>&nbsp; </label> <input type="submit" value="Submit" class="button" /> <input type="submit" value="Cancel" class="button" />
 				</form> 
 				<button href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</button></div>
+				</div>
 		</div>
 	</div>
 
