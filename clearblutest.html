@@ -8,28 +8,30 @@
 	<meta name="generator" content="TextMate http://macromates.com/">
 	<meta name="author" content="Damon Young">
 	<style type="text/css">
+	@import url(http://fonts.googleapis.com/css?family=Karla);
 	body{
 		color: white;
 		text-shadow: -1px 0 rgba(0,0,0,0.5), 0 -1px rgba(0,0,0,0.3), 0 1px rgba(255,255,255,0.5), -1px -2px rgba(0,0,0,0.3);
-		font-family: eurostile;
+		font-family: "Karla", eurostile, sans-serif;
+		font-weight:normal;
 		text-align: center;
+
+		background-color:#0099FF;
+		background:url('clearblu_bg.jpg');
 	}
+	h2{
+		font-size: 15px;
+		text-decoration: underline;
+	}
+	a{ color: white; text-decoration:none;} 
+
+	header {margin-bottom:20px;}
+
 	#columns{
 		margin-left: auto;   
 		margin-right: auto; 
-		width: 1024px;
-	}
-	.columnheading {
-		font-size: 18px;
-	 	width: 23%; 
-	 	padding: 1% }
-
-	.columntitle{
-		font-size: 18px;
-		width: 23%; padding: 1%
-
-	} 	
-
+		width: 960px;
+	}	
 
 	#clearblu{
 		text-align: center;
@@ -41,30 +43,98 @@
 		letter-spacing: 25px;
 		font-size: 18px;
 	}
-	#brand{
-		visibility: hidden;
-		-webkit-transition: visibility .3s linear 1s;
-		-moz-transition: all 0.3s linear;
+	#columns .column{
+		position: relative;
+		width: 23%;
+		padding: 1%;
 	}
-	#brand:hover #brandcontent { 
-		visibility:visible
-		
-	 }
+	#columns .brand{float:left;}
+	#columns .social{float:left;}
+	#columns .mobile{float:left;}
+	#columns .cloud{float:right;}
+	
+	#blabel{visibility: hidden;font-size: 24px;}
+	#slabel{visibility: hidden;font-size: 24px;}
+	#mlabel{visibility: hidden;font-size: 24px;}
+	#clabel{visibility: hidden; font-size: 24px;}
+	
+	.brand:hover #blabel{ visibility: visible;}
+	.social:hover #slabel{ visibility: visible;}
+	.mobile:hover #mlabel{ visibility: visible;}
+	.cloud:hover #clabel{ visibility: visible;}
+
+	.black_overlay{
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 0.8;
+	opacity:.80;
+	filter: alpha(opacity=80);
+	}
+ 
+	.white_content {
+	display: none;
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	width: 50%;
+	height: 50%;
+	padding: 16px;
+	border: 16px solid orange;
+	background-color: white;
+	z-index:1002;
+	overflow: auto;
+	}
+	
 
 	</style>
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<!-- Date: 2012-01-05 -->
+	<!-- Date: 2012-03-22 -->
 </head>
-<body bgcolor="0099FF" background="clearblu_bg.jpg">
+<body>
 	<p>
-	<div><h1 id="clearblu">CLEAR BLU</h1>
-	<h1 id="consulting">CONSULTING</h1>
-	<p><p><p>
+	<header>
+		<h1 id="clearblu">CLEAR BLU</h1>
+		<h1 id="consulting">CONSULTING</h1>
+	</header>
+	<h2>HELPING YOUR BUISNESS ANSWER ALL THE RIGHT QUESTIONS</h2>
 	<div id="columns">
-		<div><span class="columnheading brand">What is your brand?</span><span class="columnheading">Who are your customers?</span><span class="columnheading">Where are your customers?</span><span class="columnheading">How can you reach them?</span></div>
-	<div><span class="columntitle brand">BRAND Marketing</span><span class="columntitle">SOCIAL networking</span><span class="columntitle">MOBILE applications</span><span class="columntitle">CLOUD computing</span></div></div>
+		<div class="brand column">
+			<p id="bheader">What is your Brand?</p>
+			<a href="" id="blabel">BRAND Marketing</a>
+			<p>Whether you are a startup that’s still trying to discern its game-changing business model or an established firm seeking to reintroduce its offerings to a new and changing marketplace, ClearBlu can help you define your unique value proposition and brand identity to place you at the top of your industry</p>
+			<button>Get Advice</button>
+
+
+		</div>
+		<div class="social column">
+			<p class="header">Who are your customers?</p>
+			<a href="" id="slabel">SOCIAL Networking</a>
+			<p>Somewhere among the hundreds of millions of users joining online social networks every day are a group of people who are desperately seeking exactly the kind of product your company offers. ClearBlu can help you build a strategy to carve out your perfect niche on the global social graph.</p>
+			<button>Get Advice</button>
+
+		</div>
+		<div class="mobile column">
+			<p class="header">Where are your customers?</p>
+			<a href="" id="mlabel">MOBILE applications</a>
+			<p>With the explosive growth of smartphones, tablets, and near ubiquitous wi-fi access, customers now expect to be served everywhere. ClearBlu can help you expand your reach into the mobile web so that the people who need your products can get them whenever and wherever they want it.</p>
+			<button>Get Advice</button>
+		</div>
+		<div class="cloud column">
+			<p class="header">How can you Reach Them?</p>
+			<a href="" id="clabel">CLOUD computing</a>
+			<p>Getting the best value for your investments in an infrastructure that can handle the volatility of today’s marketplace is an ongoing challenge. Clearblu can help you create a framework that’s elastic enough to support all your initiatives while still keeping an eye on the bottom line</p>
+			<button  href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Get Advice</button>
+			<div id="light" class="white_content">This is the lightbox content. <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
+		</div>
+	</div>
 
 
 	<center><a href="mailto:info@clearbluconsulting.com?subject=Advice?">INFO@CLEARBLUCONSULTING.COM</a></center>
