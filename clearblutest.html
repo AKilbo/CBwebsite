@@ -39,7 +39,7 @@
 	#columns{
 		margin-left: auto;   
 		margin-right: auto; 
-		width: 990px;
+		width: 980px;
 	}	
 
 	#clearblu{
@@ -62,10 +62,10 @@
 	#columns .mobile{float:left;}
 	#columns .cloud{float:right;}
 	
-	#blabel{visibility: hidden;font-size: 24px;}
-	#slabel{visibility: hidden;font-size: 24px;}
-	#mlabel{visibility: hidden;font-size: 24px;}
-	#clabel{visibility: hidden; font-size: 24px;}
+	#blabel{visibility: hidden;font-size: 22px;}
+	#slabel{visibility: hidden;font-size: 22px;}
+	#mlabel{visibility: hidden;font-size: 22px;}
+	#clabel{visibility: hidden; font-size: 22px;}
 	
 	.brand:hover #blabel{ visibility: visible;}
 	.social:hover #slabel{ visibility: visible;}
@@ -139,7 +139,7 @@
 		<div class="brand column">
 			<p id="bheader">What is your Brand?</p>
 			<a href="javascript:unhide('bcontent')" id="blabel">BRAND Marketing</a>
-			<div id='bcontent'><p>Whether you are a startup that’s still trying to discern its game-changing business model or an established firm seeking to reintroduce its offerings to a new and changing marketplace, ClearBlu can help you define your unique value proposition and brand identity to place you at the top of your industry</p>
+			<div id='bcontent' class="hidden"><p>Whether you are a startup that’s still trying to discern its game-changing business model or an established firm seeking to reintroduce its offerings to a new and changing marketplace, ClearBlu can help you define your unique value proposition and brand identity to place you at the top of your industry</p>
 			<button  href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Get Advice</button>
 			<div id="light" class="white_content">
 				<form action="">
@@ -154,7 +154,7 @@
 		<div class="social column">
 			<p class="header">Who are your customers?</p>
 			<a href="javascript:unhide('scontent')" id="slabel">SOCIAL Networking</a>
-			<div id='scontent'><p>Somewhere among the hundreds of millions of users joining online social networks every day are a group of people who are desperately seeking exactly the kind of product your company offers. ClearBlu can help you build a strategy to carve out your perfect niche on the global social graph.</p>
+			<div id='scontent' class="hidden"><p>Somewhere among the hundreds of millions of users joining online social networks every day are a group of people who are desperately seeking exactly the kind of product your company offers. ClearBlu can help you build a strategy to carve out your perfect niche on the global social graph.</p>
 			<button  href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Get Advice</button>
 			<div id="light" class="white_content">
 				This is the lightbox content. 
@@ -163,8 +163,8 @@
 		</div>
 		<div class="mobile column">
 			<p class="header">Where are your customers?</p>
-			<a href="javascript:unhide('mcontent')" id="mlabel">MOBILE applications</a>
-			<div id='mcontent'><p>With the explosive growth of smartphones, tablets, and near ubiquitous wi-fi access, customers now expect to be served everywhere. ClearBlu can help you expand your reach into the mobile web so that the people who need your products can get them whenever and wherever they want it.</p>
+			<a href="javascript:unhide('mcontent')" id="mlabel">MOBILE Applications</a>
+			<div id='mcontent' class="hidden"><p>With the explosive growth of smartphones, tablets, and near ubiquitous wi-fi access, customers now expect to be served everywhere. ClearBlu can help you expand your reach into the mobile web so that the people who need your products can get them whenever and wherever they want it.</p>
 			<button  href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Get Advice</button>
 			<div id="light" class="white_content">
 				This is the lightbox content. 
@@ -173,8 +173,8 @@
 		</div>
 		<div class="cloud column">
 			<p class="header">How can you Reach Them?</p>
-			<a href="javascript:unhide('ccontent')" id="clabel">CLOUD computing</a>
-			<div id='ccontent'><p>Getting the best value for your investments in an infrastructure that can handle the volatility of today’s marketplace is an ongoing challenge. Clearblu can help you create a framework that’s elastic enough to support all your initiatives while still keeping an eye on the bottom line</p>
+			<a href="javascript:unhide('ccontent')" id="clabel">CLOUD Computing</a>
+			<div id='ccontent' class="hidden"><p>Getting the best value for your investments in an infrastructure that can handle the volatility of today’s marketplace is an ongoing challenge. Clearblu can help you create a framework that’s elastic enough to support all your initiatives while still keeping an eye on the bottom line</p>
 			<button  href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Get Advice</button>
 			<div id="light" class="white_content">
 				<form action="">F
