@@ -14,6 +14,54 @@
 	 		item.className=(item.className=='hidden')?'unhidden':'hidden';
  			}
 	 	}
+
+
+		function gradient(id, level){
+		var box = document.getElementById(id);
+			box.style.opacity = level;
+			box.style.MozOpacity = level;
+			box.style.KhtmlOpacity = level;
+			box.style.filter = "alpha(opacity=" + level * 100 + ")";
+			box.style.display="block";
+			return;
+		}		
+
+
+		function fadein(id) {
+			var level = 0;
+			while(level <= 1){
+				setTimeout( "gradient('" + id + "'," + level + ")", (level* 1000) + 10);
+				level += 0.01;
+			}
+		}
+
+
+// Open the lightbox
+
+
+		function openbox(formtitle, fadin){
+			var box = document.getElementById('box'); 
+ 			 document.getElementById('shadowing').style.display='block';
+			 var btitle = document.getElementById('boxtitle');
+			 btitle.innerHTML = formtitle;
+  
+ 			 if(fadin){
+				 gradient("box", 0);
+				 fadein("box");
+			}else{ 	
+    				box.style.display='block';
+  			}  	
+		}
+
+
+// Close the lightbox
+
+		function closebox(){
+   			document.getElementById('box').style.display='none';
+   			document.getElementById('shadowing').style.display='none';
+		}
+
+
 	</script>
 
 	<style type="text/css">
@@ -75,52 +123,51 @@
 	.hidden { display: none; }
  	.unhidden { display: block; }
  	
-
-	.black_overlay{
+ 	#shadowing{
 	display: none;
-	position:fixed;
-	top: 20%;
+	position: fixed;
+	top: 0%;
 	left: 0%;
 	width: 100%;
 	height: 100%;
-	background-color: black;
-	z-index:1001;
-	-moz-opacity: 0.8;
-	opacity:.80;
-	filter: alpha(opacity=80);
+	background-color: #CCA;
+	z-index:10;
+	opacity:0.5;
+	filter: alpha(opacity=50);
 	}
- 
-	.white_content {
-	float: center;
+
+
+	#box {
 	display: none;
 	position: fixed;
 	top: 20%;
-	left: 25%;
-	width: 50%;
-	height: 50%;
-	padding: 16px;
-	border: 16px solid blue;
+	left: 20%;
+	width: 400px;
+	height: 200px;
+	padding: 48px;
+	margin:0;
+	border: 1px solid black;
 	background-color: white;
-	z-index:1002;
+	z-index:101;
 	overflow: auto;
 	}
-	.input {
-    border: 1px solid #006;
-    background: #ffc;
+
+	#boxtitle{
+	position:absolute;
+	float:center;
+	top:0;
+	left:0;
+	width:496px;
+	height:24px;
+	padding:0;
+	padding-top:4px;
+	left-padding:8px;
+	margin:0;
+	border-bottom:4px solid #3CF;
+	background-color: #09c;
+	color:white;
+	text-align:center;
 	}
-	label {
-    	display: block;
-   	 	width: 150px;
-    	float: left;
-    	margin: 2px 4px 6px 4px;
-    	text-align: right;
-	}
-	.button {
-    	border: none;
-    	background: url('/forms/up.png') no-repeat top left;
-    	padding: 2px 8px;
-	}
-	br { clear: left; }
 
 	</style>
 	<!--[if lt IE 9]>
@@ -140,50 +187,59 @@
 			<p id="bheader">What is your Brand?</p>
 			<a href="javascript:unhide('bcontent')" id="blabel">BRAND Marketing</a>
 			<div id='bcontent' class="hidden"><p>Whether you are a startup that’s still trying to discern its game-changing business model or an established firm seeking to reintroduce its offerings to a new and changing marketplace, ClearBlu can help you define your unique value proposition and brand identity to place you at the top of your industry</p>
-			<button  href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Get Advice</button>
-			<div id="light" class="white_content">
-				<form action="">
-    				<label for="name">Name: </label> <input type="text" id="name" class="input" />
-   	 				<label for="password">Password: </label> <input type="password" id="password" class="input" />
-    				<label>&nbsp; </label> <input type="submit" value="Submit" class="button" /> <input type="submit" value="Cancel" class="button" />
-				</form>  
-				<button href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</button></div></div>
-
-
+			<a href="#" onClick="openbox('Title of the Form', 1)">click here</a>
+			<div id="shadowing"></div>
+<div id="box">
+  <span id="boxtitle"></span>
+  <form method="GET" action="lightbox-form-test.html" target="_parent">
+      
+    <p>Email adress: 
+      <input type="text" name="email" value="myself@somedomainname.com" maxlength="60" size="60">
+    </p>
+      
+    <p>Male 
+      <input type="radio" name="genre" value="man" checked>
+      Female 
+      <input type="radio" name="genre" value="woman">
+    </p>
+      
+    <p> City of current residence 
+      <select name="select">
+        <option selected>New York</option>
+        <option>Chicago</option>
+        <option>Miami</option>
+        <option>Los Angeles</option>
+        <option>Dallas</option>
+      </select>
+    </p>
+    <p> 
+      <input type="submit" name="submit">
+      <input type="button" name="cancel" value="Cancel" onClick="closebox()">
+    </p>
+  </form>
+</div>
+			</div>
 		</div>
+
 		<div class="social column">
 			<p class="header">Who are your customers?</p>
 			<a href="javascript:unhide('scontent')" id="slabel">SOCIAL Networking</a>
 			<div id='scontent' class="hidden"><p>Somewhere among the hundreds of millions of users joining online social networks every day are a group of people who are desperately seeking exactly the kind of product your company offers. ClearBlu can help you build a strategy to carve out your perfect niche on the global social graph.</p>
-			<button  href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Get Advice</button>
-			<div id="light" class="white_content">
-				This is the lightbox content. 
-				<button href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</button></div>
-				</div>
+			</div>
 		</div>
+
 		<div class="mobile column">
 			<p class="header">Where are your customers?</p>
 			<a href="javascript:unhide('mcontent')" id="mlabel">MOBILE Applications</a>
 			<div id='mcontent' class="hidden"><p>With the explosive growth of smartphones, tablets, and near ubiquitous wi-fi access, customers now expect to be served everywhere. ClearBlu can help you expand your reach into the mobile web so that the people who need your products can get them whenever and wherever they want it.</p>
-			<button  href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Get Advice</button>
-			<div id="light" class="white_content">
-				This is the lightbox content. 
-				<button href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</button></div>
-				</div>
+			</div>
 		</div>
+
 		<div class="cloud column">
 			<p class="header">How can you Reach Them?</p>
 			<a href="javascript:unhide('ccontent')" id="clabel">CLOUD Computing</a>
 			<div id='ccontent' class="hidden"><p>Getting the best value for your investments in an infrastructure that can handle the volatility of today’s marketplace is an ongoing challenge. Clearblu can help you create a framework that’s elastic enough to support all your initiatives while still keeping an eye on the bottom line</p>
-			<button  href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Get Advice</button>
-			<div id="light" class="white_content">
-				<form action="">F
-    				<label for="name">Name: </label> <input type="text" id="name" class="input" />
-   	 				<label for="password">Password: </label> <input type="password" id="password" class="input" />
-    				<label>&nbsp; </label> <input type="send" value="Send" class="button" /> <input type="submit" value="Cancel" class="button" />
-				</form> 
-				<button href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</button></div>
-				</div>
+			</div>
 		</div>
 	</div>
 
