@@ -7,8 +7,9 @@
 	<meta name="editor" content="SublimeText 2">
 	<meta name="Author" content="Alex Kilbo">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-	<script type="text/javascript" src="cbscript.js"></script>
+	<script type="text/javascript" src="cb.js"></script>
 	<link rel="stylesheet" type="text/css" href="cb.css"></style>
+	<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -16,8 +17,36 @@
 </head>
 <body>
 	<header id="hdr">
-		<img src="clearblu_bg.jpg" id="gradient">
-		<h1 class="cbtext">CLEAR BLU</h1>
-		<h2 class="cbtext">CONSULTING</h2>
+		<div><img src="clearblu_bg.jpg" id="gradient">
+		<h1 class="cbtext" id="clearblu">CLEARBLU</h1>
+		<h2 class="cbtext" id="consulting">CONSULTING</h2>
 	</header>
+  <div class="spacer"></div>
+	<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 4,
+  interval: 30000,
+  width: 250,
+  height: 300,
+  theme: {
+    shell: {
+      background: '#1f7ed1',
+      color: '#f0f3f5'
+    },
+    tweets: {
+      background: '#faf7fa',
+      color: '#080008',
+      links: '#07a3eb'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: true,
+    behavior: 'all'
+  }
+}).render().setUser('clearbluconsult').start();
+</script>
 </body>
