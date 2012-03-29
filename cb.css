@@ -1,5 +1,6 @@
 body{
 	background-color: white;
+	font-family:eurostile;
 }
 
 #gradient{
@@ -35,8 +36,21 @@ body{
 }
 
 #consulting{
-	letter-spacing:15px;
-	margin: 0px 0px 0px 500px;
+	font-size:13px;
+	letter-spacing:18px;
+	margin: 0px 0px 0px 535px;
 }
 
-.spacer{height:20px;};
+
+.spacer{height:20px;}
+
+.whitepaper{
+	float:right;
+	font-size:40px;
+	border-width:5px;
+	border color:black;
+}
+
+.twitter{
+	position: absolute;
+}
