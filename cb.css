@@ -72,10 +72,25 @@ nav ul li { float: left;
 
 .spacer{height:20px;}
 
-
+.contactus{
+}
 
 .whitepaper{
+	position:relative;
 	float:right;
+	height: 400px;
+	width:300px;
+	font-size:40px;
+	border-style:dotted;
+	border-width:1px;
+	border color:black;
+}
+.blog{
+	position: absolute;
+	float:center;
+	margin: 0px 0px 0px 270px;
+	width: 400px;
+	height:400px;
 	font-size:40px;
 	border-style:dotted;
 	border-width:1px;
@@ -101,6 +116,7 @@ nav ul li { float: left;
 
 	.lbox {
 	color:white;
+	font-size:18px;
 	display: none;
 	position: fixed;
 	top: 10%;
