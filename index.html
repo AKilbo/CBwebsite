@@ -6,8 +6,6 @@
 	<title>Clear Blu Consulting - Cloud, Mobile, Social, Brands</title>
 	<meta name="editor" content="SublimeText 2">
 	<meta name="Author" content="Alex Kilbo">
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script type="text/javascript" src="cb.js"></script>
 	<link rel="stylesheet" type="text/css" href="cb.css"></style>
 	<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
@@ -18,13 +16,19 @@
 </head>
 <body>
 	<header id="hdr">
-		<div><img src="clearblu_bg.jpg" id="gradient">
+		<hgroup><img src="clearblu_bg.jpg" id="gradient">
 		<h1 class="cbtext" id="clearblu">CLEARBLU</h1>
 		<h2 class="cbtext" id="consulting">CONSULTING</h2>
-    <a id="brands">BRANDS</a>
-    <a id="social">SOCIAL</a>
-    <a id="mobile">MOBILE</a>
-    <a id="cloud">CLOUD</a>
+  </hgroup>
+  <nav>  
+    <ul>  
+        <li><a href=# onClick="openbox('Get Advice', 1, "brands")">BRANDS</a></li>
+        <li><a href=# onClick="openbox('Get Advice', 1)">SOCIAL</a></li>
+        <li><a href=# onClick="openbox('Get Advice', 1)">MOBILE</a></li>
+        <li><a href=# onClick="openbox('Get Advice', 1)">CLOUD</a></li>
+    </ul>  
+</nav>  
+    
 	</header>
   <div class="twitter">
 	<script>
@@ -55,4 +59,39 @@
 }).render().setUser('clearbluconsult').start();
 </script></div>
 <div class="whitepaper">White Paper</div>
+
+
+
+<div id="shadowing"></div>
+        <div id="box">
+          <span id="boxtitle"></span>
+            <form method="GET" action="lightbox-form-test.html" target="_parent">
+              <p>Name: 
+                  <input type="text" name="name" value="First Last" maxlength="60" size="72">
+              </p>
+              <p>Company: 
+                  <input type="text" name="company" value="Company Name" maxlength="60" size="67">
+              </p>
+                <p>Email Address: 
+                  <input type="text" name="email" value="you@domain.com" maxlength="60" size="60">
+                <p>Phone: 
+                  <input type="text" name="phone" value="(XXX)-XXX-XXXX" maxlength="14" size="14">
+              </p>
+              <p>Questions:<p> 
+                  <textarea rows="5" cols="60" name="questions" value="" maxlength="600" size="100"></textarea>
+              
+                <p> Interest:
+                  <select name="select">
+                    <option selected>Brand Marketing</option>
+                    <option>Social Networking</option>
+                    <option>Mobile Applications</option>
+                    <option>Cloud Computing</option>
+                  </select>
+              </p>
+               <p> 
+                  <input type="submit" name="submit">
+                  <input type="button" name="cancel" value="Cancel" onClick="closebox()">
+              </p>
+            </form>
+        </div>
 </body>
