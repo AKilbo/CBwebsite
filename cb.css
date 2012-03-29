@@ -99,9 +99,8 @@ nav ul li { float: left;
 	filter: alpha(opacity=50);
 	}
 
-
-	#box {
-		color:white;
+	.lbox {
+	color:white;
 	display: none;
 	position: fixed;
 	top: 10%;

@@ -22,10 +22,10 @@
   </hgroup>
   <nav>  
     <ul>  
-        <li><a href=# onClick="openbox('Brand Marketing', 1)">BRANDS</a></li>
-        <li><a href=# onClick="openbox('Social Networking', 1)">SOCIAL</a></li>
-        <li><a href=# onClick="openbox('Mobile Applications', 1)">MOBILE</a></li>
-        <li><a href=# onClick="openbox('Cloud Computing', 1)">CLOUD</a></li>
+        <li><a href=# onClick="openbox(1, 'brand')">BRANDS</a></li>
+        <li><a href=# onClick="openbox(1, 'social')">SOCIAL</a></li>
+        <li><a href=# onClick="openbox( 1, 'mobile')">MOBILE</a></li>
+        <li><a href=# onClick="openbox(1, 'cloud')">CLOUD</a></li>
     </ul>  
 </nav>  
     
@@ -63,9 +63,10 @@
 
 
 <div id="shadowing"></div>
-        <div id="box">
-          <span id="boxtitle"></span>
-            <form method="GET" action="lightbox-form-test.html" target="_parent">
+        <div class="lbox" id="brand">
+          <span id="boxtitle">Brand Marketing<span>
+            <form method="GET" action="index.html" target="_parent">
+             <p>Whether you are a startup that’s still trying to discern its game-changing business model or an established firm seeking to reintroduce its offerings to a new and changing marketplace, ClearBlu can help you define your unique value proposition and brand identity to place you at the top of your industry</p>
               <p>Name: 
                   <input type="text" name="name" value="First Last" maxlength="60" size="72">
               </p>
@@ -77,20 +78,75 @@
                 <p>Phone: 
                   <input type="text" name="phone" value="(XXX)-XXX-XXXX" maxlength="14" size="14">
               </p>
-              <p>Questions:<p> 
-                  <textarea rows="5" cols="60" name="questions" value="" maxlength="600" size="100"></textarea>
-              
-                <p> Interest:
-                  <select name="select">
-                    <option selected>Brand Marketing</option>
-                    <option>Social Networking</option>
-                    <option>Mobile Applications</option>
-                    <option>Cloud Computing</option>
-                  </select>
+               <p> 
+                  <input type="submit" name="submit">
+                  <input type="button" name="cancel" value="Cancel" onClick="closebox('brand')">
+              </p>
+            </form>
+        </div>
+
+        <div class="lbox" id="social">
+          <span id="boxtitle">Social Networking<span>
+            <form method="GET" action="index.html" target="_parent">
+              <p>Somewhere among the hundreds of millions of users joining online social networks every day are a group of people who are desperately seeking exactly the kind of product your company offers. ClearBlu can help you build a strategy to carve out your perfect niche on the global social graph.</p>
+              <p>Name: 
+                  <input type="text" name="name" value="First Last" maxlength="60" size="72">
+              </p>
+              <p>Company: 
+                  <input type="text" name="company" value="Company Name" maxlength="60" size="67">
+              </p>
+                <p>Email Address: 
+                  <input type="text" name="email" value="you@domain.com" maxlength="60" size="60">
+                <p>Phone: 
+                  <input type="text" name="phone" value="(XXX)-XXX-XXXX" maxlength="14" size="14">
               </p>
                <p> 
                   <input type="submit" name="submit">
-                  <input type="button" name="cancel" value="Cancel" onClick="closebox()">
+                  <input type="button" name="cancel" value="Cancel" onClick="closebox('social')">
+              </p>
+            </form>
+        </div>
+
+        <div class="lbox" id="mobile">
+          <span id="boxtitle">Mobile Applications<span>
+            <form method="GET" action="index.html" target="_parent">
+              <p>With the explosive growth of smartphones, tablets, and near ubiquitous wi-fi access, customers now expect to be served everywhere. ClearBlu can help you expand your reach into the mobile web so that the people who need your products can get them whenever and wherever they want it.</p>
+              <p>Name: 
+                  <input type="text" name="name" value="First Last" maxlength="60" size="72">
+              </p>
+              <p>Company: 
+                  <input type="text" name="company" value="Company Name" maxlength="60" size="67">
+              </p>
+                <p>Email Address: 
+                  <input type="text" name="email" value="you@domain.com" maxlength="60" size="60">
+                <p>Phone: 
+                  <input type="text" name="phone" value="(XXX)-XXX-XXXX" maxlength="14" size="14">
+              </p>
+               <p> 
+                  <input type="submit" name="submit">
+                  <input type="button" name="cancel" value="Cancel" onClick="closebox('mobile')">
+              </p>
+            </form>
+        </div>
+
+        <div class="lbox" id="cloud">
+          <span id="boxtitle">Cloud Computing<span>
+            <form method="GET" action="index.html" target="_parent">
+              <p>Getting the best value for your investments in an infrastructure that can handle the volatility of today’s marketplace is an ongoing challenge. Clearblu can help you create a framework that’s elastic enough to support all your initiatives while still keeping an eye on the bottom line</p>
+              <p>Name: 
+                  <input type="text" name="name" value="First Last" maxlength="60" size="72">
+              </p>
+              <p>Company: 
+                  <input type="text" name="company" value="Company Name" maxlength="60" size="67">
+              </p>
+                <p>Email Address: 
+                  <input type="text" name="email" value="you@domain.com" maxlength="60" size="60">
+                <p>Phone: 
+                  <input type="text" name="phone" value="(XXX)-XXX-XXXX" maxlength="14" size="14">
+              </p>
+               <p> 
+                  <input type="submit" name="submit">
+                  <input type="button" name="cancel" value="Cancel" onClick="closebox('cloud')">
               </p>
             </form>
         </div>

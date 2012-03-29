@@ -26,18 +26,16 @@ function fadein(id)
 // Open the lightbox
 
 
-function openbox(formtitle, fadin)
+function openbox(fadin, forum)
 {
-  var box = document.getElementById('box'); 
+  var whichbox = forum;
+  var box = document.getElementById(box); 
   document.getElementById('shadowing').style.display='block';
-
-  var btitle = document.getElementById('boxtitle');
-  btitle.innerHTML = formtitle;
   
   if(fadin)
   {
-   gradient("box", 0);
-   fadein("box");
+   gradient(forum, 0);
+   fadein(forum);
   }
   else
   {   
@@ -48,9 +46,9 @@ function openbox(formtitle, fadin)
 
 // Close the lightbox
 
-function closebox()
+function closebox(forum)
 {
-   document.getElementById('box').style.display='none';
+   document.getElementById(forum).style.display='none';
    document.getElementById('shadowing').style.display='none';
 }
 
