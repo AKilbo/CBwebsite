@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Clear Blu Consulting - Cloud, Mobile, Social, Brands</title>
+	<title>Clear Blu Consulting</title>
 	<meta name="editor" content="SublimeText 2">
 	<meta name="Author" content="Alex Kilbo">
 	<script type="text/javascript" src="cb.js"></script>
@@ -16,20 +16,21 @@
 </head>
 <body>
 	<header id="hdr">
-		<hgroup><img src="clearblu_bg.jpg" id="gradient">
+		<hgroup id="logo"><img src="clearblu_bg.jpg" id="gradient">
 		<h1 class="cbtext" id="clearblu">CLEARBLU</h1>
 		<h2 class="cbtext" id="consulting">CONSULTING</h2>
-  </hgroup>
   <nav>  
     <ul>  
-        <li><a href=# onClick="openbox(1, 'brand')">BRANDS</a></li>
-        <li><a href=# onClick="openbox(1, 'social')">SOCIAL</a></li>
-        <li><a href=# onClick="openbox( 1, 'mobile')">MOBILE</a></li>
         <li><a href=# onClick="openbox(1, 'cloud')">CLOUD</a></li>
+        <li><a href=# onClick="openbox(1, 'mobile')">MOBILE</a></li>
+        <li><a href=# onClick="openbox(1, 'social')">SOCIAL</a></li>
+        <li><a href=# onClick="openbox(1, 'brand')">BRANDS</a></li>
     </ul>  
 </nav>  
+</hgroup>
 	</header>
   <div id="spacer"></div>
+  <div class="wrapper">
   <div class="twitter">
 	<script>
   new TWTR.Widget({
@@ -58,9 +59,9 @@
   }
 }).render().setUser('clearbluconsult').start();
 </script></div>
-<div class="spacer"></div>
 <div class="blog">Blog</div>
 <div class="whitepaper">White Paper</div>
+</div>
 
 
 
@@ -68,16 +69,19 @@
         <div class="lbox" id="brand">
           <span id="boxtitle">Brand Marketing<span>
             <form method="GET" action="index.html" target="_parent">
-             <p>Whether you are a startup that’s still trying to discern its game-changing business model or an established firm seeking to reintroduce its offerings to a new and changing marketplace, ClearBlu can help you define your unique value proposition and brand identity to place you at the top of your industry</p>
-             <p class="contactus">Contact us to schedule a consultation</p>
-              <p>Name: 
-                  <input type="text" name="name" value="First Last" maxlength="60" size="72">
-              </p>
-              <p>Company: 
-                  <input type="text" name="company" value="Company Name" maxlength="60" size="67">
+              <p>Whether you are a startup that’s still trying to discern its game-changing business model or an established firm seeking to reintroduce its offerings to a new and changing marketplace, ClearBlu can help you define your unique value proposition and brand identity to place you at the top of your industry</p>
+              <p class="contactus">Contact us to schedule a consultation</p>
+              <table> 
+                  <tr>
+                    <td>Name:</td>
+                  <td><input type="text" name="name" value="First Last" maxlength="60" size="30"></td>
+              <tr>
+                <td>Company:</td>
+                  <td><input type="text" name="company" value="Company Name" maxlength="60" size="30"></td>
+                </table>
               </p>
                 <p>Email Address: 
-                  <input type="text" name="email" value="you@domain.com" maxlength="60" size="60">
+                  <input type="text" name="email" value="you@domain.com" maxlength="60" size="30">
                 <p>Phone: 
                   <input type="text" name="phone" value="(XXX)-XXX-XXXX" maxlength="14" size="14">
               </p>
@@ -116,14 +120,15 @@
             <form method="GET" action="index.html" target="_parent">
               <p>With the explosive growth of smartphones, tablets, and near ubiquitous wi-fi access, customers now expect to be served everywhere. ClearBlu can help you expand your reach into the mobile web so that the people who need your products can get them whenever and wherever they want it.</p>
               <p class="contactus">Contact us to schedule a consultation</p>
+              <div class="inputtext">
               <p>Name: 
-                  <input type="text" name="name" value="First Last" maxlength="60" size="72">
+                  <input type="text" name="name" value="First Last" maxlength="60" size="40">
               </p>
               <p>Company: 
-                  <input type="text" name="company" value="Company Name" maxlength="60" size="67">
+                  <input type="text" name="company" value="Company Name" maxlength="60" size="40">
               </p>
                 <p>Email Address: 
-                  <input type="text" name="email" value="you@domain.com" maxlength="60" size="60">
+                  <input type="text" name="email" value="you@domain.com" maxlength="60" size="40">
                 <p>Phone: 
                   <input type="text" name="phone" value="(XXX)-XXX-XXXX" maxlength="14" size="14">
               </p>
@@ -131,6 +136,7 @@
                   <input type="submit" name="submit">
                   <input type="button" name="cancel" value="Cancel" onClick="closebox('mobile')">
               </p>
+            </div>
             </form>
         </div>
 
