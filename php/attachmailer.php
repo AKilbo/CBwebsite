@@ -20,13 +20,13 @@
 	 		Phone Number: '.$phone.'
 			 E-mail: '.$email.'
 			 company: '.$company.' contact info';
-		$files = array('whitepapers/BrandComputingWhitepaper.pdf');	
-		$cbfiles= array();
+		$files = array('../whitepapers/BrandComputingWhitepaper.pdf');
+		$cbfiles= array('../whitepapers/blank.txt');
 		if(sendEmail($to,$fromName,$fromEmail,$subject,$message,$cc='',$bcc='',$files))
 				$_SESSION['mailed'] = 'true';
 		else
 				$_SESSION['mailed']= 'failed';
-		sendEmail('info@clearbluconsulting',$fromName,$fromEmail,'Whitepaper Requested',$cbmessage,$cc='',$bcc='dropbox@47374009.clearbluconsulting1.highrisehq.com',$cbfiles);
+		sendEmail('info@clearbluconsulting',$fromName,$fromEmail,'Whitepaper Requested',$cbmessage,$cc='',$bcc='',$cbfiles);
 		header("location: ../index.php");
 	//=======================================
 	//   mail sending end

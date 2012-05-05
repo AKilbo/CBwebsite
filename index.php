@@ -1,5 +1,3 @@
-
-
 <?php 
 session_start();
 require_once('./php/simplepie.inc'); 
@@ -7,10 +5,6 @@ $feed = new SimplePie('http://clearbluconsulting.com/blog/feed/');
 $feed->init();
 $feed->handle_content_type();
 ?>
-
-
-
-
 
 <!Doctype html>
 <html lang="en">
@@ -97,7 +91,7 @@ $feed->handle_content_type();
         <div class="lbox" id="brand">
           <span id="boxtitle">Brand Marketing<span>
             <form method="post" action="php/mailer.php" target="_parent">
-              <p class="description">Whether you are a startup that’s still trying to discern its game-changing business model or an established firm seeking to reintroduce its offerings to a new and changing marketplace, ClearBlu can help you define your unique value proposition and brand identity to place you at the top of your industry</p>
+              <p class="description">Whether you are a startup that’s still trying to discern its game-changing business model or an established firm seeking to reintroduce its offerings to a new and changing marketplace, ClearBlu can help you define your unique value proposition and brand identity to place you at the top of your industry.</p>
               <p class="contactus">Contact us to schedule a consultation</p>
                 <table>
                   <tr>
@@ -182,7 +176,7 @@ $feed->handle_content_type();
         <div class="lbox" id="cloud">
           <span id="boxtitle">Cloud Computing<span>
             <form method="post" action="php/mailer.php" target="_parent">
-              <p class="description">Getting the best value for your investments in an infrastructure that can handle the volatility of today’s marketplace is an ongoing challenge. Clearblu can help you create a framework that’s elastic enough to support all your initiatives while still keeping an eye on the bottom line</p>
+              <p class="description">Getting the best value for your investments in an infrastructure that can handle the volatility of today’s marketplace is an ongoing challenge. Clearblu can help you create a framework that’s elastic enough to support all your initiatives while still keeping an eye on the bottom line.</p>
               <p class="contactus">Contact us to schedule a consultation</p>
              <table>
                   <tr>
@@ -206,7 +200,7 @@ $feed->handle_content_type();
             </form>
         </div>
 
-        <div class="lbox" id="brandcomputing">
+        <div class="smalllbox" id="brandcomputing">
           <span id="boxtitle">REQUEST THE LATEST WHITEPAPER<span>
             <form method="post" action="php/attachmailer.php" target="_parent">
               <p class="whitecontactus">Please complete the request form to recieve our latest publication</p>
@@ -230,17 +224,21 @@ $feed->handle_content_type();
               </p>
             </form>
         </div>
+
+        <div class="mailbox" id="mailsuccess">Your mail has been successfully sent!
+            <input type="button" name="close" value="Close" onClick="closebox('mailsuccess')">
+        </div>
 </body>
 
 <?php 
   if(isset($_SESSION['mailed'])){
     $mailed=$_SESSION['mailed'];
     if($mailed=='true'){
-      echo "<script language=javascript>alert('mail has been sent!')</script>";
+      echo "<script language=javascript>openbox(1,'mailsuccess')</script>";
        $_SESSION['mailed']="false";
     }
     if($mailed=='failed'){
-      echo "<script language=javascript>alert('Mail has failed to send. Please contact us with the link at the bottom of the screen')</script>";
+      echo "<script language=javascript>alert('Mail has failed to send. Please contact us with at the bottom right of the screen.')</script>";
        $_SESSION['mailed']="false";
     }
   }
