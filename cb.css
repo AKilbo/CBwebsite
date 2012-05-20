@@ -1,6 +1,7 @@
 body{
 	background-color: #BCF1FB;
 	font-family:'EurostileNextW01-Regula', eurostile;
+	font-size: 100%;
 }
 
 #logo{
@@ -39,7 +40,7 @@ body{
 }
 
 #consulting{
-	font-size:13px;
+	font-size:0.813em;
 	letter-spacing:18px;
 	margin: 0px 0px 0px 535px;
 }
@@ -96,7 +97,7 @@ nav ul li { float: right;
 	float:left;
 	width:120px;
 	padding: 15px 15px 0px 15px;
-	font-size:20px;
+	font-size: 1.25em;
 }
 
 .whitecontactus{
@@ -104,7 +105,7 @@ nav ul li { float: right;
 	float:left;
 	width:140px;
 	padding: 40px 15px 0px 15px;
-	font-size:20px;
+	font-size: 1.25em;
 }
 
 .whitepaperwrapper{
@@ -127,7 +128,7 @@ nav ul li { float: right;
 #recentwhitepapername{}
 #whitepaperdescription{ 
 	font-weight: normal;
-	font-size: 14px;
+	font-size: 0.875em;
 
 }
 #whitepaperlink{
@@ -149,7 +150,7 @@ nav ul li { float: right;
 
 .blog{
 	background color: white;
-	font-size:14px;
+	font-size: 0.875em;
 	position: absolute;
 	float:center;
 	margin: 0px 0px 20px 270px;
@@ -162,8 +163,8 @@ nav ul li { float: right;
 
 #email{
 	position: absolute;
-bottom:0;
-right:10px;}
+	bottom:0;
+	right:10px;}
 
 	table{
 		padding: 20px 30px 10px 20px;
@@ -199,13 +200,13 @@ input:focus, textarea:focus {
 
 	.lbox {
 	color:#15fcdd;
-	font-size:18px;
+	font-size:1.125em;
 	display: none;
 	position: fixed;
 	top: 10%;
 	left: 20%;
-	width: 450px;
-	height: 280px;
+	width: 470px;
+	height: 300px;
 	padding: 48px;
 	margin:0;
 	border-style: solid;
@@ -217,7 +218,7 @@ input:focus, textarea:focus {
 
 	.smalllbox {
 	color:#15fcdd;
-	font-size:18px;
+	font-size:1.125em;
 	display: none;
 	position: fixed;
 	top: 10%;
@@ -236,7 +237,7 @@ input:focus, textarea:focus {
 	.mailbox {
 	float:center;
 	color:#15fcdd;
-	font-size:18px;
+	font-size:1.125em;
 	display: none;
 	position: fixed;
 	top: 44%;
