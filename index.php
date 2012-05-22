@@ -93,6 +93,7 @@ $feed->handle_content_type();
             <form method="post" action="php/mailer.php" target="_parent">
               <p class="description">Whether you are a startup that’s still trying to discern its game-changing business model or an established firm seeking to reintroduce its offerings to a new and changing marketplace, ClearBlu can help you define your unique value proposition and brand identity to place you at the top of your industry.</p>
               <p class="contactus">Contact us to schedule a consultation</p>
+              <div class="inputtext">
                 <table>
                   <tr>
                     <td>Name:</td>
@@ -112,6 +113,7 @@ $feed->handle_content_type();
                   <input type="submit" name="submit">
                   <input type="button" name="cancel" value="Cancel" onClick="closebox('brand')">
               </p>
+            </div>
             </form>
         </div>
 
@@ -120,6 +122,7 @@ $feed->handle_content_type();
             <form method="post" action="php/mailer.php" target="_parent">
               <p class="description">Somewhere among the hundreds of millions of users joining online social networks every day are a group of people who are desperately seeking exactly the kind of product your company offers. ClearBlu can help you build a strategy to carve out your perfect niche on the global social graph.</p>
               <p class="contactus">Contact us to schedule a consultation</p>
+              <div class="inputtext">
              <table>
                   <tr>
                     <td>Name:</td>
@@ -140,6 +143,7 @@ $feed->handle_content_type();
                   <input type="submit" name="submit">
                   <input type="button" name="cancel" value="Cancel" onClick="closebox('social')">
               </p>
+              </div>
             </form>
         </div>
 
@@ -178,6 +182,7 @@ $feed->handle_content_type();
             <form method="post" action="php/mailer.php" target="_parent">
               <p class="description">Getting the best value for your investments in an infrastructure that can handle the volatility of today’s marketplace is an ongoing challenge. Clearblu can help you create a framework that’s elastic enough to support all your initiatives while still keeping an eye on the bottom line.</p>
               <p class="contactus">Contact us to schedule a consultation</p>
+              <div class="inputtext">
              <table>
                   <tr>
                     <td>Name:</td>
@@ -197,6 +202,8 @@ $feed->handle_content_type();
                   <input type="submit" name="submit">
                   <input type="button" name="cancel" value="Cancel" onClick="closebox('cloud')">
               </p>
+            </div>
+
             </form>
         </div>
 
