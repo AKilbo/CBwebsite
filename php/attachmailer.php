@@ -4,7 +4,7 @@
 	//   mail sending start
 	//=======================================
 		if(isset($_POST['submit'])) {	
-		$requestername = $_POST['username'];
+		$requestername = $_POST['name'];
 		$email = $_POST['email'];
 		$phone = $_POST['phone'] ;
 		$company = $_POST['company']; 
@@ -13,21 +13,22 @@
 		$fromName = 'Clear Blu Consulting';
 		$fromEmail = 'noreply@clearbluconsulting.com';
 		$subject = 'Brand Computing whitepaper';		
-		$message = 'Dear ' .$_POST['username']. ',  thank you for requesting our latest whitepaper. You\'ll find a PDF version attached to this email.  If you would like to learn how you can apply these principles to your own business, please contact us at info@clearbluconsulting.com.  
+		$message = 'Dear ' .$requestername. ',  thank you for requesting our latest whitepaper. You\'ll find a PDF version attached to this email.  If you would like to learn how you can apply these principles to your own business, please contact us at info@clearbluconsulting.com.  
 		Thanks again! 
 		Clear Blu';
 		$cbmessage =  $requestername.' requested the latest whitepaper.
 	 		Phone Number: '.$phone.'
 			 E-mail: '.$email.'
-			 company: '.$company.' contact info';
+			 company: '.$company. '';
 		$files = array('../whitepapers/BrandComputingWhitepaper.pdf');
-		$cbfiles= array('../whitepapers/blank.txt');
+		$cbfiles= array();
 		if(sendEmail($to,$fromName,$fromEmail,$subject,$message,$cc='',$bcc='',$files))
 				$_SESSION['mailed'] = 'true';
 		else
 				$_SESSION['mailed']= 'failed';
 		sendEmail('info@clearbluconsulting',$fromName,$fromEmail,'Whitepaper Requested',$cbmessage,$cc='',$bcc='',$cbfiles);
 		header("location: ../index.php");
+
 	//=======================================
 	//   mail sending end
 	//=======================================	
